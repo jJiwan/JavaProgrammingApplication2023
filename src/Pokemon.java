@@ -6,7 +6,7 @@ public class Pokemon {
     private int hp;
 
     // constructor, 생성자(특수 형태의 메서드)
-    // 리턴타입이 없으며 클래스의 이름과 같다
+    // 리턴타입이 없으며 클래스의 이름과 같다A
     Pokemon(){
         System.out.println("포켓몬 객체 생성(기본 생성자)!");
         this.hp = 100;
@@ -47,9 +47,16 @@ public class Pokemon {
         return level;
     }
 
-    public void setLevel(int level) {
+//    public void setLevel(int level) {
+//        this.level = level;
+//    }
+
+    public Pokemon setLevel(int level) {
+        // 리턴타입 void -> Pokemon
         this.level = level;
+        return this;  // 실행 시점의 포켓몬 객체를 리턴
     }
+
 
     public int getHp() {
         return hp;
