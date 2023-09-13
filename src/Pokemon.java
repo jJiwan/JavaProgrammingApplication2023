@@ -6,26 +6,22 @@ public class Pokemon {
     private int hp;
 
     // constructor, 생성자(특수 형태의 메서드)
-    // 리턴타입이 없으며 클래스의 이름과 같다A
+    // 리턴타입이 없으며 클래스의 이름과 같다
     Pokemon(){
         System.out.println("포켓몬 객체 생성(기본 생성자)!");
-        this.hp = 100;
     }
 
     // constructor overloading
     // 생성자 오버로딩
     Pokemon(String name){
-        this(name, 1); // 항상 생성자 첫 번째 줄에 있어야 함
         System.out.println("포켓몬 객체 생성(매개변수 1개 생성자)!");
-//        this.name = name;
-//        this.level = 1;
-//        this.hp = 100;
+        this.name = name;
     }
-    Pokemon(String name, int level) {
-        System.out.println("포켓몬 객체 생성(매개변수 2개 생성자)!");
+    Pokemon(String name, int level, int hp) {
+        System.out.println("포켓몬 객체 생성(매개변수 3개 생성자)!");
         this.name = name;
         this.level = level;
-        this.hp = 100;
+        this.hp = hp;
     }
 
     // alt+insert
@@ -47,16 +43,9 @@ public class Pokemon {
         return level;
     }
 
-//    public void setLevel(int level) {
-//        this.level = level;
-//    }
-
-    public Pokemon setLevel(int level) {
-        // 리턴타입 void -> Pokemon
+    public void setLevel(int level) {
         this.level = level;
-        return this;  // 실행 시점의 포켓몬 객체를 리턴
     }
-
 
     public int getHp() {
         return hp;
